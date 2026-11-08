@@ -1,0 +1,6 @@
+{
+  "name": "オールコネクション協同組合 | ALL CONNECTION COOPERATIVE",
+  "description": "大阪府大阪市を拠点とする外国人技能実習・特定技能の監理団体・登録支援機関「オールコネクション協同組合」公式ウェブサイト。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
