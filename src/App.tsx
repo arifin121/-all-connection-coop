@@ -8,9 +8,12 @@ import {
   ArrowRight,
   Building2,
   CheckCircle2,
+  ClipboardList,
   Download,
+  FileCheck,
   FileText,
   Globe2,
+  GraduationCap,
   HeartHandshake,
   Mail,
   MapPin,
@@ -19,6 +22,7 @@ import {
   Printer,
   Scale,
   ShieldCheck,
+  UserCheck,
   Users,
   X,
 } from 'lucide-react';
@@ -47,7 +51,7 @@ const PUBLIC_DOCUMENTS: Record<'regulation' | 'feetable', DocumentInfo> = {
       {
         heading: '第1条（目的及び基本方針）',
         content: [
-          '本規程は、オールコネクション協同組合（以下「当組合」という。）が実施する特定監理事業に関し、技能実習法その他の関係法令を遵守し、適正かつ円滑な技能実習の運営と技能実習生の保護を図ることを目的とする。',
+          '本規程は、オールコネクション協同組合（以下「当組合」という。）が実施する一般監理事業に関し、技能実習法その他の関係法令を遵守し、適正かつ円滑な技能実習の運営と技能実習生の保護を図ることを目的とする。',
         ],
       },
       {
@@ -254,7 +258,7 @@ export default function App() {
       '--------------------------------------------------------------------',
       '発行元: オールコネクション協同組合',
       '所在地: 〒559-0013 大阪府大阪市住之江区御崎6-1-3 タカラビル405',
-      '種別: 特定監理事業 | 登録支援機関（23登-008878）',
+      '種別: 一般監理事業 | 登録支援機関（23登-008878）',
       'TEL: 06-6654-8845 / Email: info@all-connection.jp',
     ];
 
@@ -516,13 +520,13 @@ export default function App() {
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-36 text-center">
             <p className="text-xs sm:text-sm font-bold tracking-widest text-[#FFE08A] drop-shadow-sm mb-4">
-              外国人技能実習・特定技能 特定監理事業 ／ 登録支援機関（23登-008878）
+              外国人技能実習・特定技能 一般監理事業 ／ 登録支援機関（23登-008878）
             </p>
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight max-w-4xl mx-auto mb-5 drop-shadow-md">
               未来を築く、世界と繋がる
             </h1>
             <p className="text-sm sm:text-base font-medium text-white max-w-2xl mx-auto leading-relaxed drop-shadow-sm">
-              大阪を拠点に、徹底した法令遵守と多言語サポート体制で受入れ企業様と外国人材を繋ぐ確かな架け橋。申請手続きから入国後講習・配属後の定期フォローまで一貫して支援いたします。
+              大阪を拠点に、徹底した法令遵守と多言語サポート体制で受入れ企業様と海外人材を繋ぐ確かな架け橋。申請手続きから入国後講習・配属後の定期フォローまで一貫して支援いたします。
             </p>
           </div>
 
@@ -534,7 +538,7 @@ export default function App() {
                 <div className="text-lg sm:text-xl font-bold text-white tabular-nums mt-0.5">
                   2021年9月3日 許可
                 </div>
-                <div className="text-xs text-[#E5B869] mt-0.5">特定監理事業 認定組合</div>
+                <div className="text-xs text-[#E5B869] mt-0.5">一般監理事業 認定組合</div>
               </div>
               <div>
                 <div className="text-xs text-slate-300">登録支援機関番号</div>
@@ -578,7 +582,7 @@ export default function App() {
                 </h2>
                 <div className="space-y-5 text-base text-slate-700 leading-relaxed">
                   <p>
-                    オールコネクション協同組合は、長年にわたり技能実習生の受入れを支援してまいりました。法令遵守を徹底し、受入れ企業様と実習生一人ひとりに寄り添った、きめ細やかなサポートを提供することをお約束します。
+                    オールコネクション協同組合は、長年にわたり技能実習生の受入れを支援してまいりました。法令遵守を徹底し、受入れ企業様と実習生ひとりひとりに寄り添った、きめ細やかなサポートを提供することをお約束します。
                   </p>
                   <p>
                     私たちの使命は、単なる人材紹介ではありません。技術の移転、文化の交流を通じて、関わるすべての人々が共に成長できる環境を創造することです。
@@ -735,7 +739,7 @@ export default function App() {
                         オールコネクション協同組合
                       </div>
                       <div className="text-xs text-slate-600 mt-0.5">
-                        代表理事 中村 律子 · 特定監理事業 / 登録支援機関
+                        代表理事 中村 律子 · 一般監理事業 / 登録支援機関
                       </div>
                       <div className="text-xs text-[#117878] font-medium tabular-nums mt-0.5">
                         登録番号：23登-008878
@@ -848,21 +852,35 @@ export default function App() {
             {/* Subsections A & B */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
               {/* Subsection A: 外国人技能実習 */}
-              <div className="rounded-xl border border-slate-200 bg-white p-8 flex flex-col justify-between">
+              <div className="rounded-xl border border-slate-200 bg-white overflow-hidden flex flex-col justify-between group">
                 <div>
-                  <div className="flex items-center justify-end gap-4 mb-4">
-                    <span className="text-xs text-slate-500 tabular-nums">
+                  <div className="relative aspect-16/9 w-full overflow-hidden bg-[#0F2537]">
+                    <img
+                      src="images/services/ginou-jisshuu.jpg"
+                      alt="受入れ企業様の製造現場での定期巡回・技能実習生への指導風景"
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute top-3 right-3 bg-[#0F2537]/85 backdrop-blur-xs text-white text-xs font-medium px-3 py-1 rounded-md tabular-nums">
                       在留期間：最長5年間
-                    </span>
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0F2537]/75 via-transparent to-transparent flex items-end p-4 sm:p-5">
+                      <span className="text-xs font-bold text-[#FFE08A] tracking-wide">
+                        定期巡回・監査指導による安心の現場フォロー
+                      </span>
+                    </div>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-[#0F2537] mb-4">
-                    外国人技能実習
-                  </h3>
-                  <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                    外国人技能実習制度とは、開発途上国の人材育成を目的として、日本で培われた技能や技術を移転する制度です。最長5年間、技能実習生として日本で働きながら技能を習得し、母国での経済発展に貢献することが期待されます。
-                  </p>
+
+                  <div className="p-6 sm:p-8 pb-0 sm:pb-0">
+                    <h3 className="text-xl sm:text-2xl font-bold text-[#0F2537] mb-3">
+                      外国人技能実習
+                    </h3>
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                      外国人技能実習制度とは、開発途上国の人材育成を目的として、日本で培われた技能や技術を移転する制度です。最長5年間、技能実習生として日本で働きながら技能を習得し、母国での経済発展に貢献することが期待されます。
+                    </p>
+                  </div>
                 </div>
-                <div className="mt-6 pt-5 border-t border-slate-100 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-500">
+                <div className="px-6 sm:px-8 pb-6 sm:pb-8 mt-6 pt-5 border-t border-slate-100 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-500">
                   <span>第1号技能実習（1年目）</span>
                   <span aria-hidden="true">·</span>
                   <span>第2号技能実習（2〜3年目）</span>
@@ -872,21 +890,35 @@ export default function App() {
               </div>
 
               {/* Subsection B: 外国人特定技能 */}
-              <div className="rounded-xl border border-slate-200 bg-white p-8 flex flex-col justify-between">
+              <div className="rounded-xl border border-slate-200 bg-white overflow-hidden flex flex-col justify-between group">
                 <div>
-                  <div className="flex items-center justify-end gap-4 mb-4">
-                    <span className="text-xs text-slate-500 tabular-nums">
+                  <div className="relative aspect-16/9 w-full overflow-hidden bg-[#0F2537]">
+                    <img
+                      src="images/services/tokutei-ginou.jpg"
+                      alt="特定技能外国人への義務的支援計画および生活オリエンテーションの様子"
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute top-3 right-3 bg-[#0F2537]/85 backdrop-blur-xs text-white text-xs font-medium px-3 py-1 rounded-md tabular-nums">
                       対象：特定産業分野（16分野）
-                    </span>
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0F2537]/75 via-transparent to-transparent flex items-end p-4 sm:p-5">
+                      <span className="text-xs font-bold text-[#FFE08A] tracking-wide">
+                        登録支援機関による義務的支援計画・生活オリエンテーション
+                      </span>
+                    </div>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-[#0F2537] mb-4">
-                    外国人特定技能
-                  </h3>
-                  <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                    「特定技能」とは、2019年4月に創設された、日本国内で人手不足が深刻とされている特定産業分野（16分野）において、即戦力となる外国人材の就労が可能になった在留資格です。
-                  </p>
+
+                  <div className="p-6 sm:p-8 pb-0 sm:pb-0">
+                    <h3 className="text-xl sm:text-2xl font-bold text-[#0F2537] mb-3">
+                      外国人特定技能
+                    </h3>
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                      「特定技能」とは、2019年4月に創設された、日本国内で人手不足が深刻とされている特定産業分野（16分野）において、即戦力となる外国人材の就労が可能になった在留資格です。
+                    </p>
+                  </div>
                 </div>
-                <div className="mt-6 pt-5 border-t border-slate-100 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-500">
+                <div className="px-6 sm:px-8 pb-6 sm:pb-8 mt-6 pt-5 border-t border-slate-100 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-500">
                   <span>登録支援機関（23登-008878）</span>
                   <span aria-hidden="true">·</span>
                   <span>即戦力人材の受入れ</span>
@@ -897,47 +929,76 @@ export default function App() {
             </div>
 
             {/* Highlight Box: 特定技能の介護も対応！ */}
-            <div className="rounded-2xl border border-[#117878]/35 bg-[#f7f9fa] p-8 sm:p-10">
-              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 mb-6 border-b border-slate-200">
-                <div className="flex items-center gap-3.5">
-                  <div className="w-11 h-11 rounded-xl bg-[#117878] text-white flex items-center justify-center shrink-0">
-                    <HeartHandshake className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold text-[#117878] tracking-wider">
-                      介護分野の特定技能人材支援
+            <div className="rounded-2xl border border-[#117878]/35 bg-[#f7f9fa] p-6 sm:p-10 overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+                {/* Left Column: Featured Kaigo Visual */}
+                <div className="lg:col-span-5 flex">
+                  <div className="relative w-full min-h-[260px] sm:min-h-[320px] rounded-xl overflow-hidden border border-slate-200/80 bg-[#0F2537] shadow-xs group">
+                    <img
+                      src="images/services/kaigo-support.jpg"
+                      alt="介護施設で利用者様と笑顔でコミュニケーションをとる特定技能介護スタッフ"
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0F2537]/80 via-transparent to-transparent flex items-end p-4 sm:p-5">
+                      <div>
+                        <div className="text-[11px] font-bold text-[#FFE08A] tracking-wider mb-0.5">
+                          医療・福祉現場での活躍
+                        </div>
+                        <p className="text-xs sm:text-sm font-bold text-white leading-snug">
+                          思いやりと確かな専門知識で、利用者様に寄り添う介護人材をご紹介
+                        </p>
+                      </div>
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-[#0F2537]">
-                      特定技能の介護も対応！
-                    </h3>
                   </div>
                 </div>
-                <div className="text-xs font-medium text-slate-600">
-                  介護施設 · 病院 · 医療福祉現場での即戦力採用を支援
-                </div>
-              </div>
 
-              <p className="text-sm sm:text-base text-slate-700 leading-relaxed mb-8">
-                当社も特定技能の介護職を支援しております。介護職人材は介護施設のみならず、病院などで活躍しております。特定技能「介護」の在留資格を持つ人材は、来日前に以下の2つの試験に合格しています。
-              </p>
+                {/* Right Column: Kaigo Support Details & Exam Qualifications */}
+                <div className="lg:col-span-7 flex flex-col justify-between">
+                  <div>
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 mb-5 border-b border-slate-200">
+                      <div className="flex items-center gap-3.5">
+                        <div className="w-11 h-11 rounded-xl bg-[#117878] text-white flex items-center justify-center shrink-0">
+                          <HeartHandshake className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <div className="text-xs font-bold text-[#117878] tracking-wider">
+                            介護分野の特定技能人材支援
+                          </div>
+                          <h3 className="text-xl sm:text-2xl font-bold text-[#0F2537]">
+                            特定技能の介護も対応！
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="text-xs font-medium text-slate-600">
+                        介護施設 · 病院 · 医療福祉現場での即戦力採用を支援
+                      </div>
+                    </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white rounded-xl border border-slate-200 p-6">
-                  <h4 className="text-base sm:text-lg font-bold text-[#0F2537] mb-2">
-                    1. 介護技能評価試験
-                  </h4>
-                  <p className="text-sm text-slate-700 leading-relaxed">
-                    介護の基本、利用者の心と体の仕組み、コミュニケーション技術、生活支援技術など、介護職として必要な専門知識と技能を証明します。
-                  </p>
-                </div>
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed mb-6">
+                      当社も特定技能の介護職を支援しております。介護職人材は介護施設のみならず、病院などで活躍しております。特定技能「介護」の在留資格を持つ人材は、来日前に以下の2つの試験に合格しています。
+                    </p>
+                  </div>
 
-                <div className="bg-white rounded-xl border border-slate-200 p-6">
-                  <h4 className="text-base sm:text-lg font-bold text-[#0F2537] mb-2">
-                    2. 日本語能力試験
-                  </h4>
-                  <p className="text-sm text-slate-700 leading-relaxed">
-                    日常会話がある程度でき、業務に必要な「聞く・話す」能力（日本語能力試験N4レベル以上）をクリアしています。
-                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                    <div className="bg-white rounded-xl border border-slate-200 p-5 sm:p-6">
+                      <h4 className="text-base font-bold text-[#0F2537] mb-2">
+                        1. 介護技能評価試験
+                      </h4>
+                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        介護の基本、利用者の心と体の仕組み、コミュニケーション技術、生活支援技術など、介護職として必要な専門知識と技能を証明します。
+                      </p>
+                    </div>
+
+                    <div className="bg-white rounded-xl border border-slate-200 p-5 sm:p-6">
+                      <h4 className="text-base font-bold text-[#0F2537] mb-2">
+                        2. 日本語能力試験
+                      </h4>
+                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        日常会話がある程度でき、業務に必要な「聞く・話す」能力（日本語能力試験N4レベル以上）をクリアしています。
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -974,7 +1035,7 @@ export default function App() {
                         '職場の活性化と生産性の向上',
                         '国際的なネットワークの構築',
                         '企業の社会的責任(CSR)への貢献',
-                        '将来的な海外展開の足がかり',
+                        '将来的な海外展開への足がかり',
                       ].map((item) => (
                         <li
                           key={item}
@@ -1023,7 +1084,7 @@ export default function App() {
                       安心して日本で学び、働くために
                     </h3>
                     <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
-                      私たちは、皆さんが日本で安心して技術を学び、充実した生活を送れるよう全力でサポートします。日本の法律や文化、習慣についてもしっかりと研修を行います。困ったことがあれば、いつでも母国語で相談できるスタッフがいます。私たちと一緒に、日本での夢を実現しましょう。
+                      私たちは、皆さんが日本で安心して技術を学び、充実した生活を送れるよう全力でサポートします。日本の法律や文化、習慣についてもしっかりと研修を行います。困ったことがあれば、いつでも母国語で相談できるスタッフがいます。私たちと一緒に、日本での夢を叶えましょう。
                     </p>
                   </div>
                 </div>
@@ -1073,6 +1134,7 @@ export default function App() {
                   description:
                     '受入れ要件やご希望をヒアリングし、最適なプランをご提案します。',
                   detail: '職種・人数・時期の確認及び受入れ計画の策定',
+                  icon: ClipboardList,
                 },
                 {
                   step: 'ステップ 02',
@@ -1080,6 +1142,7 @@ export default function App() {
                   description:
                     '提携する送出し機関を通じて候補者を募集し、オンラインまたは現地で面接を実施します。',
                   detail: '適性試験・実技確認・個別面接の実施',
+                  icon: UserCheck,
                 },
                 {
                   step: 'ステップ 03',
@@ -1087,6 +1150,7 @@ export default function App() {
                   description:
                     '在留資格認定証明書交付申請など、複雑な書類作成を当組合が代行します。',
                   detail: '技能実習計画認定申請・入管申請書類の作成代行',
+                  icon: FileCheck,
                 },
                 {
                   step: 'ステップ 04',
@@ -1094,30 +1158,43 @@ export default function App() {
                   description:
                     '約1ヶ月間の入国後講習を経て、各企業様へ配属。実習がスタートします。',
                   detail: '配属後も定期訪問・監査・母国語通訳で継続支援',
+                  icon: GraduationCap,
                 },
-              ].map((item) => (
-                <div
-                  key={item.step}
-                  className="relative rounded-xl border border-slate-200 bg-white p-7 flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-5">
-                      <span className="text-xs font-bold tracking-wider text-[#117878] tabular-nums">
-                        {item.step}
-                      </span>
+              ].map((item, index) => {
+                const StepIcon = item.icon;
+                return (
+                  <div
+                    key={item.step}
+                    className="relative rounded-xl border border-slate-200 border-t-4 border-t-[#117878] bg-white p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-[#117878]/50 transition-all duration-300 group"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between mb-5">
+                        <div className="w-12 h-12 rounded-xl bg-[#117878]/10 text-[#117878] group-hover:bg-[#117878] group-hover:text-white transition-colors flex items-center justify-center shrink-0">
+                          <StepIcon className="w-6 h-6" />
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-xs font-bold tracking-wider text-[#117878] bg-[#117878]/8 px-2.5 py-1 rounded-md tabular-nums">
+                            {item.step}
+                          </span>
+                          {index < 3 && (
+                            <ArrowRight className="hidden lg:block w-4 h-4 text-slate-300 group-hover:text-[#117878] transition-colors" />
+                          )}
+                        </div>
+                      </div>
+                      <h3 className="text-lg font-bold text-[#0F2537] mb-3 group-hover:text-[#117878] transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-slate-600 leading-relaxed">
+                        {item.description}
+                      </p>
                     </div>
-                    <h3 className="text-lg font-bold text-[#0F2537] mb-3">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">
-                      {item.description}
-                    </p>
+                    <div className="mt-6 pt-4 border-t border-slate-100 flex items-start gap-2 text-xs text-slate-600 font-medium">
+                      <CheckCircle2 className="w-4 h-4 text-[#117878] shrink-0 mt-0.5" />
+                      <span>{item.detail}</span>
+                    </div>
                   </div>
-                  <div className="mt-6 pt-4 border-t border-slate-100 text-xs text-slate-500">
-                    {item.detail}
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
@@ -1145,7 +1222,7 @@ export default function App() {
                       value:
                         '〒559-0013 大阪府大阪市住之江区御崎6-1-3 タカラビル405',
                     },
-                    { label: '種別', value: '特定監理事業 | 登録支援機関' },
+                    { label: '種別', value: '一般監理事業 | 登録支援機関' },
                     { label: '設立', value: '2021年4月8日' },
                     { label: '許可日', value: '2021年9月3日' },
                     { label: '登録支援機関登録番号', value: '23登-008878' },
@@ -1741,7 +1818,7 @@ export default function App() {
               <div className="pt-4 border-t border-slate-200 text-xs text-slate-500 space-y-1 tabular-nums">
                 <div>発行：オールコネクション協同組合（代表理事 中村 律子）</div>
                 <div>所在地：〒559-0013 大阪府大阪市住之江区御崎6-1-3 タカラビル405</div>
-                <div>許可区分：特定監理事業 ／ 登録支援機関（23登-008878）</div>
+                <div>許可区分：一般監理事業 ／ 登録支援機関（23登-008878）</div>
               </div>
             </div>
 
