@@ -5,6 +5,7 @@
 
 import React, { useEffect, useState } from 'react';
 import {
+  Anchor,
   ArrowRight,
   Building2,
   CheckCircle2,
@@ -18,6 +19,7 @@ import {
   Mail,
   MapPin,
   Menu,
+  PackageCheck,
   Phone,
   Printer,
   Scale,
@@ -987,6 +989,156 @@ export default function App() {
                       </h4>
                       <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
                         介護の基本、利用者の心と体の仕組み、コミュニケーション技術、生活支援技術など、介護職として必要な専門知識と技能を証明します。
+                      </p>
+                    </div>
+
+                    <div className="bg-white rounded-xl border border-slate-200 p-5 sm:p-6">
+                      <h4 className="text-base font-bold text-[#0F2537] mb-2">
+                        2. 日本語能力試験
+                      </h4>
+                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        日常会話がある程度でき、業務に必要な「聞く・話す」能力（日本語能力試験N4レベル以上）をクリアしています。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Highlight Box: 特定技能の物流倉庫も対応！ */}
+            <div className="mt-8 rounded-2xl border border-[#117878]/35 bg-[#f7f9fa] p-6 sm:p-10 overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+                {/* Left Column: Featured Logistics Visual */}
+                <div className="lg:col-span-5 flex">
+                  <div className="relative w-full min-h-[260px] sm:min-h-[320px] rounded-xl overflow-hidden border border-slate-200/80 bg-[#0F2537] shadow-xs group">
+                    <img
+                      src="images/services/logistics-support.jpg"
+                      alt="物流倉庫の現場で検品・在庫管理業務を行う特定技能スタッフ"
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0F2537]/80 via-transparent to-transparent flex items-end p-4 sm:p-5">
+                      <div>
+                        <div className="text-[11px] font-bold text-[#FFE08A] tracking-wider mb-0.5">
+                          物流・倉庫現場での活躍
+                        </div>
+                        <p className="text-xs sm:text-sm font-bold text-white leading-snug">
+                          安全意識と確かなチームワークで、物流現場を支える即戦力人材をご紹介
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Column: Logistics Support Details & Exam Qualifications */}
+                <div className="lg:col-span-7 flex flex-col justify-between">
+                  <div>
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 mb-5 border-b border-slate-200">
+                      <div className="flex items-center gap-3.5">
+                        <div className="w-11 h-11 rounded-xl bg-[#117878] text-white flex items-center justify-center shrink-0">
+                          <PackageCheck className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <div className="text-xs font-bold text-[#117878] tracking-wider">
+                            物流倉庫分野の特定技能人材支援
+                          </div>
+                          <h3 className="text-xl sm:text-2xl font-bold text-[#0F2537]">
+                            特定技能の物流倉庫も対応！
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="text-xs font-medium text-slate-600">
+                        物流センター · 倉庫 · 配送拠点での即戦力採用を支援
+                      </div>
+                    </div>
+
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed mb-6">
+                      当社は特定技能の物流倉庫を支援しております。特定技能「物流倉庫」の在留資格を持つ人材は、来日前に以下の2つの試験に合格しています。
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                    <div className="bg-white rounded-xl border border-slate-200 p-5 sm:p-6">
+                      <h4 className="text-base font-bold text-[#0F2537] mb-2">
+                        1. 物流倉庫の技能評価試験
+                      </h4>
+                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        物流倉庫の基本、日本語の能力、理解度、チームワーク等、物流倉庫の技能者として必要な専門知識と技能を証明します。
+                      </p>
+                    </div>
+
+                    <div className="bg-white rounded-xl border border-slate-200 p-5 sm:p-6">
+                      <h4 className="text-base font-bold text-[#0F2537] mb-2">
+                        2. 日本語能力試験
+                      </h4>
+                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        日常会話がある程度でき、業務に必要な「聞く・話す」能力（日本語能力試験N4レベル以上）をクリアしています。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Highlight Box: 特定技能の漁業も対応！ */}
+            <div className="mt-8 rounded-2xl border border-[#117878]/35 bg-[#f7f9fa] p-6 sm:p-10 overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+                {/* Left Column: Featured Fishery Visual */}
+                <div className="lg:col-span-5 flex">
+                  <div className="relative w-full min-h-[260px] sm:min-h-[320px] rounded-xl overflow-hidden border border-slate-200/80 bg-[#0F2537] shadow-xs group">
+                    <img
+                      src="images/services/fishery-support.jpg"
+                      alt="漁業・養殖の現場で日本人指導員と共に作業を行う特定技能スタッフ"
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0F2537]/80 via-transparent to-transparent flex items-end p-4 sm:p-5">
+                      <div>
+                        <div className="text-[11px] font-bold text-[#FFE08A] tracking-wider mb-0.5">
+                          漁業・養殖現場での活躍
+                        </div>
+                        <p className="text-xs sm:text-sm font-bold text-white leading-snug">
+                          現地の水産学校・専門学校との連携で、専門知識を備えた人材をご紹介
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Column: Fishery Support Details & Exam Qualifications */}
+                <div className="lg:col-span-7 flex flex-col justify-between">
+                  <div>
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 mb-5 border-b border-slate-200">
+                      <div className="flex items-center gap-3.5">
+                        <div className="w-11 h-11 rounded-xl bg-[#117878] text-white flex items-center justify-center shrink-0">
+                          <Anchor className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <div className="text-xs font-bold text-[#117878] tracking-wider">
+                            漁業分野の特定技能人材支援
+                          </div>
+                          <h3 className="text-xl sm:text-2xl font-bold text-[#0F2537]">
+                            特定技能の漁業も対応！
+                          </h3>
+                        </div>
+                      </div>
+                      <div className="text-xs font-medium text-slate-600">
+                        漁業 · 養殖業 · 水産現場での即戦力採用を支援
+                      </div>
+                    </div>
+
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed mb-6">
+                      当社も特定技能の漁業・養殖を支援しております。海外の水産学校・専門学校と提携して卒業生を育成して、日本へのキャリアチャンスを支援しております。特定技能「漁業・養殖」の在留資格を持つ人材は、来日前に以下の2つの試験に合格しています。
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                    <div className="bg-white rounded-xl border border-slate-200 p-5 sm:p-6">
+                      <h4 className="text-base font-bold text-[#0F2537] mb-2">
+                        1. 漁業・養殖の技能評価試験
+                      </h4>
+                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                        漁業・養殖の基本、海上での技能やチームワーク等、また漁業・養殖の技能者として必要な専門知識と技能を証明します。
                       </p>
                     </div>
 
